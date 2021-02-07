@@ -35,6 +35,7 @@ export const LandingPopInCloseButton = styled.div`
     align-items: center;
     justify-content: center;
     font-weight: 600;
+    font-family: "Hind", sans-serif;
     :hover {
         border: 4px solid grey;
         color: grey;
