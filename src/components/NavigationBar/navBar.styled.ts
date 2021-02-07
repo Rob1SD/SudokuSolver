@@ -5,10 +5,13 @@ export const NavBarWrapper = styled(SectionWrapper)`
     box-shadow: 0px 0px 5px #aaaaaa;
 `;
 export const NavBarBodyWrapper = styled(SectionBodyWrapper)`
-    height: 120px;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: 500px) {
+        height: 120px;
+    }
     @media screen and (max-width: 800px) {
         flex-direction: column;
         align-items: center;
