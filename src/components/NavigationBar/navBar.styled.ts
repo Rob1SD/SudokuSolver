@@ -5,7 +5,7 @@ export const NavBarWrapper = styled(SectionWrapper)`
     box-shadow: 0px 0px 5px #aaaaaa;
 `;
 export const NavBarBodyWrapper = styled(SectionBodyWrapper)`
-    height: 90px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
