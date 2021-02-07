@@ -1,1 +1,1 @@
-npm install && npm run start && start chrome "http://127.0.0.1:8000/"
+npm install && start chrome "http://127.0.0.1:8000/" && npm run start 
