@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FormLanding } from "../Form/form";
+import { Hero } from "../Hero/hero";
 import { NavBar } from "../NavigationBar/navBar";
 import {
     LandingIframe,
@@ -11,19 +13,24 @@ import {
 export const Landing = () => {
     const [state, setState] = useState({
         popInDisplayed: false,
+        popInUrl: "https://calendly.com/rsahbi/rendez-vous?month=2021-02",
     });
-    const handlePrimeCLick = () => {
-        setState({ popInDisplayed: !state.popInDisplayed });
+    const handlePrimeCLick = (url?: string) => {
+        url && url !== state.popInUrl
+            ? setState({ popInUrl: url, popInDisplayed: !state.popInDisplayed })
+            : setState({ ...state, popInDisplayed: !state.popInDisplayed });
     };
     return (
         <LandingWrapper>
-            <NavBar onClickPrime={handlePrimeCLick} />
+            <NavBar onClickPrime={() => handlePrimeCLick("https://calendly.com/rsahbi/rendez-vous?month=2021-02")} />
             <LandingPopIn hidden={!state.popInDisplayed}>
                 <LandingPopInCloseButtonWrapper>
-                    <LandingPopInCloseButton onClick={handlePrimeCLick}>X</LandingPopInCloseButton>
+                    <LandingPopInCloseButton onClick={() => handlePrimeCLick()}>X</LandingPopInCloseButton>
                 </LandingPopInCloseButtonWrapper>
-                <LandingIframe title="Réserver un rdv" src={"https://calendly.com/rsahbi/rendez-vous?month=2021-02"} />
+                {/* <LandingIframe title="Réserver un rdv" src={"https://iscparis.com/mentions-legales/"} /> */}
+                <LandingIframe title="Réserver un rdv" src={state.popInUrl} />
             </LandingPopIn>
+            <Hero />
         </LandingWrapper>
     );
 };

@@ -1,8 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const CTAWrapper = styled.a<{ prime?: boolean }>`
+const invalidCss = css``;
+
+export const CTAWrapper = styled.a<{ prime?: boolean; isInvalid?: boolean }>`
     width: fit-content;
-    padding: 0 10px;
+    padding: 2px 10px;
     background-color: ${(props) => (props.prime ? "#F29F5C" : "#FF6778")};
     cursor: pointer;
     min-height: 40px;
@@ -11,7 +13,7 @@ export const CTAWrapper = styled.a<{ prime?: boolean }>`
     justify-content: center;
     flex-direction: column;
     color: white;
-    font-family: "Hind", sans-serif;
+    font-family: var(--font-family);
     font-weight: 600;
     font-size: 1.2rem;
     border-radius: 3px;
@@ -21,6 +23,10 @@ export const CTAWrapper = styled.a<{ prime?: boolean }>`
     :hover {
         background-color: ${(props) => (props.prime ? "#F3AF5D" : "#FF6899")};
         box-shadow: unset;
-        margin-top: 5px;
+        padding-top: 4px;
+        padding-bottom: 0px;
+    }
+    @media screen and (max-width: 500px) {
+        font-size: 0.8rem;
     }
 `;

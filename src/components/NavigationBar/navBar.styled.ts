@@ -9,8 +9,10 @@ export const NavBarBodyWrapper = styled(SectionBodyWrapper)`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @media screen and (max-width: 500px) {
-        height: 150px;
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
     }
 `;
 export const NavBarCTAWrapper = styled.div`
@@ -20,11 +22,6 @@ export const NavBarCTAWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media screen and (max-width: 800px) {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-    }
 `;
 export const NavBarImageWrapper = styled.div`
     width: fit-content;
@@ -33,4 +30,7 @@ export const NavBarImageWrapper = styled.div`
 
 export const NavBarImage = styled.img`
     width: 250px;
+    @media screen and (max-width: 767px) {
+        width: 200px;
+    }
 `;

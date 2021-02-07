@@ -12,7 +12,7 @@ export const SectionBodyWrapper = styled.div`
     display: flex;
     max-width: 1024px;
     width: 100%;
-    padding: 0 20px;
+    padding: 20px;
 `;
 export const LandingIframe = styled.iframe`
     width: 80%;
@@ -35,7 +35,7 @@ export const LandingPopInCloseButton = styled.div`
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    font-family: "Hind", sans-serif;
+    font-family: var(--font-family);
     :hover {
         border: 4px solid grey;
         color: grey;
