@@ -21,8 +21,26 @@ export const FormInput = styled.input`
     border-radius: 3px;
     padding-left: 20px;
     font-family: var(--font-family);
+    color: #666666;
 `;
 export const CtaWrapper = styled.div`
     display: flex;
     justify-content: center;
+`;
+export const CheckboxWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    color: #666666;
+    font-family: var(--font-family);
+`;
+
+export const FormLink = styled.a`
+    padding-left: 3px;
+    color: #666666;
+    font-family: var(--font-family);
+    text-decoration: underline;
+    cursor: pointer;
+    :hover {
+        text-decoration: none;
+    }
 `;

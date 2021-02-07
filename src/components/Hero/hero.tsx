@@ -4,12 +4,13 @@ import { HeroBodyWrapper, HeroWrapper } from "./hero.styled";
 
 interface IHeroProps {
     children?: any;
+    linkClick:()=>void;
 }
-export const Hero = ({ children }: IHeroProps) => {
+export const Hero = ({ children, linkClick }: IHeroProps) => {
     return (
         <HeroWrapper>
             <HeroBodyWrapper>
-                <FormLanding />
+                <FormLanding linkClick={linkClick}/>
             </HeroBodyWrapper>
         </HeroWrapper>
     );

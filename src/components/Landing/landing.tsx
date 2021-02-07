@@ -27,10 +27,9 @@ export const Landing = () => {
                 <LandingPopInCloseButtonWrapper>
                     <LandingPopInCloseButton onClick={() => handlePrimeCLick()}>X</LandingPopInCloseButton>
                 </LandingPopInCloseButtonWrapper>
-                {/* <LandingIframe title="Réserver un rdv" src={"https://iscparis.com/mentions-legales/"} /> */}
                 <LandingIframe title="Réserver un rdv" src={state.popInUrl} />
             </LandingPopIn>
-            <Hero />
+            <Hero linkClick={() => handlePrimeCLick("https://iscparis.com/mentions-legales/")} />
         </LandingWrapper>
     );
 };

@@ -36,6 +36,7 @@ export const LandingPopInCloseButton = styled.div`
     justify-content: center;
     font-weight: 600;
     font-family: var(--font-family);
+    transition: border-color 0.3s linear, color 0.3s linear;
     :hover {
         border: 4px solid grey;
         color: grey;
