@@ -15,7 +15,7 @@ export const NavBar = (props: INavBarProps) => {
                     <NavBarImage src={A} alt="navbarimage" />
                 </NavBarImageWrapper>
                 <NavBarCTAWrapper>
-                    <CTA>Télécharger la brochure</CTA>
+                    <CTA onClick={props.onClickSecondary}>Télécharger la brochure</CTA>
                     <CTA prime={true} onClick={props.onClickPrime}>
                         Prendre un rdv
                     </CTA>

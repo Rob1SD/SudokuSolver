@@ -1,14 +1,23 @@
 import React from "react";
 import { CTA } from "../CTA/cta";
-import { CheckboxWrapper, CtaWrapper, FormInput, FormLink, FormTitle, FormWrapper } from "./form.styled";
+import {
+    CheckboxWrapper,
+    CtaWrapper,
+    FormInput,
+    FormLink,
+    FormLinkTextWrapper,
+    FormTitle,
+    FormWrapper,
+} from "./form.styled";
 
 interface IFormLandingProps {
     linkClick: () => void;
+    mobileHidden?: boolean;
 }
 
-export const FormLanding = ({ linkClick }: IFormLandingProps) => {
+export const FormLanding = ({ linkClick, mobileHidden }: IFormLandingProps) => {
     return (
-        <FormWrapper>
+        <FormWrapper mobileHidden={mobileHidden}>
             <FormTitle>Télécharger la brochure du Bachelor</FormTitle>
             <FormInput placeholder={"Prénom"} />
             <FormInput placeholder={"Nom"} />
@@ -17,8 +26,10 @@ export const FormLanding = ({ linkClick }: IFormLandingProps) => {
             <FormInput placeholder={"Niveau Actuel"} />
             <CheckboxWrapper>
                 <FormInput type={"checkbox"} placeholder={"Niveau Actuel"} />
-                {"J'ai lu et j'accepte la "}
-                <FormLink onClick={linkClick}>{" Politique de Gestion et de Protection des Données"}</FormLink>
+                <FormLinkTextWrapper>
+                    {"J'ai lu et j'accepte la "}
+                    <FormLink onClick={linkClick}>{" Politique de Gestion et de Protection des Données"}</FormLink>
+                </FormLinkTextWrapper>
             </CheckboxWrapper>
 
             <CtaWrapper>

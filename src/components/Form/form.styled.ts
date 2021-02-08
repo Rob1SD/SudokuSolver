@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-export const FormWrapper = styled.form`
+export const FormWrapper = styled.form<{ mobileHidden?: boolean }>`
     height: 500px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -9,6 +10,10 @@ export const FormWrapper = styled.form`
     box-shadow: 3px 13px 17px #aaaaaa;
     padding: 10px 30px;
     border-radius: 4px;
+    background-color: white;
+    @media screen and (max-width: 600px) {
+        ${(props) => (props.mobileHidden ? "display: none" : "")};
+    }
 `;
 export const FormTitle = styled.h2`
     color: #666666;
@@ -32,6 +37,11 @@ export const CheckboxWrapper = styled.div`
     align-items: center;
     color: #666666;
     font-family: var(--font-family);
+    ${FormInput} {
+        height: unset;
+        align-self: normal;
+        margin: 5px;
+    }
 `;
 
 export const FormLink = styled.a`
@@ -44,3 +54,4 @@ export const FormLink = styled.a`
         text-decoration: none;
     }
 `;
+export const FormLinkTextWrapper = styled.div``;

@@ -42,15 +42,29 @@ export const LandingPopInCloseButton = styled.div`
         color: grey;
     }
 `;
-export const LandingPopIn = styled.div<{ hidden?: boolean }>`
+interface LandingPopInProps {
+    hidden?: boolean;
+    desktopHidden?: boolean;
+    mobileHidden?: boolean;
+    zIndex?: number;
+}
+export const LandingPopIn = styled.div<LandingPopInProps>`
     display: ${(props) => (props.hidden ? "none" : "flex")};
     height: 100vh;
+    overflow-y: hidden;
     width: 100%;
+    touch-action: none;
     flex-direction: column;
     position: absolute;
     top: 0;
-    z-index: 6000;
+    z-index: ${(props) => (props.zIndex ? props.zIndex : "1000")};
     background-color: rgba(100, 100, 100, 0.6);
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 1023px) {
+        ${(props) => (props.mobileHidden ? "display:none" : "")}
+    }
+    @media screen and (min-width: 1024px) {
+        ${(props) => (props.desktopHidden ? "display:none" : "")}
+    }
 `;

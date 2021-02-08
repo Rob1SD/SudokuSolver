@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { SectionBodyWrapper, SectionWrapper } from "../Landing/landing.styled";
 
 export const NavBarWrapper = styled(SectionWrapper)`
-    box-shadow: 0px 0px 5px #aaaaaa;
+    box-shadow: 10px 4px 5px #CDCDCD;
 `;
 export const NavBarBodyWrapper = styled(SectionBodyWrapper)`
     height: 70px;
