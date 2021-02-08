@@ -13,6 +13,7 @@ export const FormWrapper = styled.form<{ mobileHidden?: boolean }>`
     background-color: white;
     @media screen and (max-width: 600px) {
         ${(props) => (props.mobileHidden ? "display: none" : "")};
+        width: 75%;
     }
 `;
 export const FormTitle = styled.h2`

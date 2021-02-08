@@ -41,6 +41,10 @@ export const LandingPopInCloseButton = styled.div`
         border: 4px solid grey;
         color: grey;
     }
+    @media screen and (max-width: 767px) {
+        width: 30px;
+        height: 30px;
+    }
 `;
 interface LandingPopInProps {
     hidden?: boolean;
